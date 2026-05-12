@@ -1,0 +1,170 @@
+:root {
+  /* Identidade Visual $cleenker */
+  --brand-orange: #F3931A;    /* Cor da Logo */
+  --bg-primary: #1A1A1A;      /* Fundo 1 */
+  --bg-secondary: #121212;    /* Fundo 2 */
+  --btn-green: #1B5D20;       /* Botões */
+  --btn-hover: #247a2a;
+  
+  /* Texto e Suporte */
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border: #2d2d2d;
+  --white: #ffffff;
+
+  /* Tipografia */
+  --sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --heading: 'Inter', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  font: 17px/150% var(--sans);
+  letter-spacing: -0.01em;
+  color-scheme: dark;
+  color: var(--text-main);
+  background: var(--bg-primary);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-primary);
+}
+
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* --- Títulos Modernos --- */
+h1, h2 {
+  font-family: var(--heading);
+  font-weight: 700;
+  color: var(--white);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin: 40px 0 20px;
+}
+
+h2 {
+  font-size: 28px;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+p {
+  color: var(--text-muted);
+}
+
+/* --- Cabeçalho --- */
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: rgba(26, 26, 26, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--brand-orange);
+}
+
+/* --- Hero Section --- */
+.hero {
+  padding: 100px 5% 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: radial-gradient(circle at top, #252525 0%, var(--bg-primary) 70%);
+}
+
+.highlight {
+  color: var(--brand-orange);
+}
+
+/* --- Botões no padrão $cleenker --- */
+.btn-primary {
+  background: var(--btn-green);
+  color: var(--white);
+  border: none;
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px 0 rgba(27, 93, 32, 0.39);
+}
+
+.btn-primary:hover {
+  background: var(--btn-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(27, 93, 32, 0.45);
+}
+
+/* --- Features / Grid --- */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 80px 5%;
+  background-color: var(--bg-secondary);
+}
+
+.feature-card {
+  background: var(--bg-primary);
+  padding: 40px 30px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  text-align: left;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-card:hover {
+  border-color: var(--brand-orange);
+  transform: translateY(-5px);
+}
+
+.feature-card h3 {
+  color: var(--brand-orange);
+  margin-bottom: 15px;
+}
+
+/* --- Rodapé --- */
+.footer {
+  background-color: var(--bg-secondary);
+  padding: 50px 5% 20px;
+  border-top: 1px solid var(--border);
+}
+
+.footer-content {
+  margin-bottom: 30px;
+}
+
+.logo-symbol {
+  color: var(--brand-orange);
+}
+
+@media (max-width: 1024px) {
+  h1 { font-size: 36px; }
+  .hero { padding: 60px 5%; }
+}
