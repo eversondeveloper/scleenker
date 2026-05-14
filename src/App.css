@@ -296,3 +296,4 @@ nav a:hover { color: var(--brand-orange); }
   .footer-content { flex-direction: column; gap: 20px; text-align: center; }
   .logo-text { font-size: 24px; }
 }
+
