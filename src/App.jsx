@@ -41,14 +41,6 @@ function App() {
     }
   };
 
-  const team = [
-    { name: "Everson Silva de Souza", role: "CEO & Fundador", education: "Engenharia de Software" },
-    { name: "Arlindo Lopes Galvão Júnior", role: "CTO & Co-fundador", education: "Engenharia de Software" },
-    { name: "Jairo da Silva Sobrinho Junior", role: "COO & Co-fundador", education: "Engenharia de Software" },
-    { name: "Cláudio Gonçalves da Silva", role: "CPO & CMO & Co-fundador", education: "Análise e Desenv. de Sistemas" },
-    { name: "Christian de Andrade Silva", role: "CSO & Co-fundador", education: "Engenharia de Software" },
-  ];
-
   return (
     <div className="app-container">
       <header className="header">
@@ -60,7 +52,7 @@ function App() {
         <nav>
           <a href="#solucao">O Projeto</a>
           <a href="#pilares">Nossa Essência</a>
-          <a href="#equipe">Equipe</a>
+          <a href="#fundador">Fundador</a>
         </nav>
       </header>
 
@@ -151,21 +143,110 @@ function App() {
           </div>
         </section>
 
-        <section className="team-section" id="equipe">
+        {/* Seção do Fundador - Layout Corrigido */}
+        <section className="features" id="fundador" style={{ backgroundColor: '#151515' }}>
           <div className="section-header">
-            <h2>Quem está por trás da revolução</h2>
-            <p>Especialistas dedicados a transformar a gestão do varejo brasileiro.</p>
+            <span className="badge">Liderança & Visão</span>
+            <h2>
+              Criado por quem entende 
+              <span className="highlight"> de tecnologia e gestão</span>
+            </h2>
+            <p>Conheça o visionário por trás da plataforma $cleenker</p>
           </div>
-          <div className="features-grid">
-            {team.map((member, index) => (
-              <div key={index} className="feature-card">
-                <h3>{member.name}</h3>
-                <p className="highlight" style={{ fontSize: '0.9rem', fontWeight: 'bold', margin: '10px 0' }}>
-                  {member.role}
-                </p>
-                <p style={{ fontSize: '0.85rem', opacity: 0.8 }}>Graduando em {member.education}</p>
+          
+          {/* Container flexível para o layout do fundador */}
+          <div style={{ 
+            maxWidth: '1200px', 
+            margin: '0 auto',
+            display: 'flex',
+            gap: '30px',
+            flexWrap: 'wrap',
+            justifyContent: 'center'
+          }}>
+            {/* Card principal do Everson - maior */}
+            <div className="feature-card" style={{ 
+              flex: '2',
+              minWidth: '300px',
+              textAlign: 'left'
+            }}>
+              <div className="feature-icon" style={{ textAlign: 'center' }}>👨‍💻</div>
+              <h3 style={{ textAlign: 'center' }}>Everson Silva de Souza</h3>
+              <p className="highlight" style={{ fontSize: '0.9rem', fontWeight: 'bold', margin: '10px 0', textAlign: 'center' }}>
+                CEO & Fundador
+              </p>
+              
+              <div style={{ margin: '20px 0' }}>
+                <div style={{ 
+                  display: 'flex', 
+                  justifyContent: 'space-between', 
+                  padding: '10px 0',
+                  borderBottom: '1px solid var(--border-color)'
+                }}>
+                  <span style={{ color: 'var(--text-muted)' }}>Formação:</span>
+                  <span style={{ fontWeight: '500' }}>Engenharia de Software</span>
+                </div>
+                <div style={{ 
+                  display: 'flex', 
+                  justifyContent: 'space-between', 
+                  padding: '10px 0',
+                  borderBottom: '1px solid var(--border-color)'
+                }}>
+                  <span style={{ color: 'var(--text-muted)' }}>Expertise:</span>
+                  <span style={{ fontWeight: '500' }}>Gestão Estratégica & Inovação</span>
+                </div>
+                <div style={{ 
+                  display: 'flex', 
+                  justifyContent: 'space-between', 
+                  padding: '10px 0'
+                }}>
+                  <span style={{ color: 'var(--text-muted)' }}>Experiência:</span>
+                  <span style={{ fontWeight: '500' }}>+8 anos em desenvolvimento</span>
+                </div>
               </div>
-            ))}
+              
+              <div style={{ 
+                marginTop: '20px', 
+                padding: '20px', 
+                background: 'rgba(0,0,0,0.3)', 
+                borderRadius: '8px', 
+                borderLeft: '3px solid var(--brand-orange)'
+              }}>
+                <p style={{ fontStyle: 'italic', margin: 0, lineHeight: 1.6 }}>
+                  "A tecnologia deve simplificar, não complicar. O $cleenker nasceu para dar aos empresários o controle total sobre suas finanças com uma ferramenta que realmente funciona."
+                </p>
+                <div style={{ marginTop: '15px', textAlign: 'right' }}>
+                  <div style={{ width: '50px', height: '2px', background: 'var(--brand-orange)', marginLeft: 'auto', marginBottom: '8px' }}></div>
+                  <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', margin: 0 }}>Everson Silva • Fundador</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Cards laterais - Visão e Missão */}
+            <div style={{ 
+              flex: '1',
+              minWidth: '250px',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '30px'
+            }}>
+              <div className="feature-card" style={{ textAlign: 'center', height: '100%' }}>
+                <div className="feature-icon">🚀</div>
+                <h3>Visão 2026</h3>
+                <p>Transformar a gestão financeira de milhares de empresas com uma plataforma acessível, poderosa e intuitiva.</p>
+              </div>
+              
+              <div className="feature-card" style={{ textAlign: 'center', height: '100%' }}>
+                <div className="feature-icon">💡</div>
+                <h3>Missão</h3>
+                <p>Democratizar o acesso a ferramentas de gestão de elite, antes restritas a grandes corporações.</p>
+              </div>
+              
+              <div className="feature-card" style={{ textAlign: 'center', height: '100%' }}>
+                <div className="feature-icon">🎯</div>
+                <h3>Propósito</h3>
+                <p>Empoderar pequenos e médios empresários com tecnologia que impulsiona resultados reais.</p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -203,7 +284,7 @@ function App() {
           <p className="footer-contact">scleenker@gmail.com</p>
         </div>
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} $cleenker Brasil.</p>
+          <p>&copy; {new Date().getFullYear()} $cleenker Brasil. Criado por Everson Silva.</p>
         </div>
       </footer>
     </div>
