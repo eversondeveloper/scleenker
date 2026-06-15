@@ -24,6 +24,7 @@
   background: var(--bg-primary);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  text-decoration: none;
 }
 
 body {

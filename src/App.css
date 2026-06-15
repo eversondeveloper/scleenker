@@ -1,9 +1,9 @@
-/* App.css - Identidade Visual Consolidada $cleenker */
+/* App.css - Identidade Visual Consolidada $cleenkr */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Lexend:wght@400;700;800&display=swap');
 
 :root {
-  /* Cores Oficiais $cleenker */
+  /* Cores Oficiais $cleenkr */
   --brand-orange: #F3931A;    
   --bg-primary: #1A1A1A;      
   --bg-secondary: #121212;    
@@ -21,6 +21,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
@@ -55,7 +56,6 @@ body {
   font-size: 28px;
   letter-spacing: -1px;
   color: var(--brand-orange);
-  text-decoration: none;
   display: flex;
   align-items: center;
   user-select: none;
@@ -114,7 +114,6 @@ nav { display: flex; gap: 30px; align-items: center; }
 
 nav a {
   color: var(--text-muted);
-  text-decoration: none;
   font-size: 15px;
   transition: color 0.3s ease;
 }
@@ -296,4 +295,3 @@ nav a:hover { color: var(--brand-orange); }
   .footer-content { flex-direction: column; gap: 20px; text-align: center; }
   .logo-text { font-size: 24px; }
 }
-
